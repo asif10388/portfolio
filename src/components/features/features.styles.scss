@@ -36,7 +36,6 @@
 }
 
 .feature-image {
-  // background: #00214d;
   @apply w-32 h-32 inline-flex items-center text-indigo-500 flex-shrink-0 overflow-hidden;
   & img {
     @apply w-3/5 object-contain object-center;

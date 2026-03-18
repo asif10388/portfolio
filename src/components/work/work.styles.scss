@@ -15,16 +15,28 @@ p {
   background: $color-primary;
 }
 
-.workcard {
-  border-radius: 10px;
-  border: 2px solid gray;
+/* Card hover effects */
+.work-card {
+  transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-  .work-buttons button {
-    margin-left: 0;
-  }
-  .work-buttons button:nth-child(2) {
-    margin-top: 1.25rem;
-  }
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom button styles */
+.card-link-button {
+  background: $color-primary;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card-link-button:hover {
+  background: #00c9a8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }

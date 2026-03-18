@@ -1,17 +1,15 @@
 @import "../../styles/variables.scss";
 
 .footer-body {
-  background: #f0f8f5;
-  color: $primary-text-color;
-  a {
+  & h1,
+  h2,
+  h3 {
     color: $primary-text-color;
-    cursor: pointer;
-    &:hover {
-      color: $color-primary;
-    }
+    font-family: $headline-font;
+    font-weight: 700;
   }
-
-  span {
-    color: $inverted-text-color;
+  p,
+  label {
+    font-family: $default-font;
   }
 }
