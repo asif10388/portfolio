@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Design tokens are defined in Phase 2. */
+@theme {
+  --color-bg: #08090c;
+  --color-fg: #e8eaf0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}

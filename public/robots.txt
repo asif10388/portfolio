@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asifkhandev.netlify.app/sitemap-index.xml
