@@ -1,16 +1,103 @@
 @import "tailwindcss";
 
-/* Design tokens are defined in Phase 2. */
-@theme {
-  --color-bg: #08090c;
-  --color-fg: #e8eaf0;
+/* Concept: a one-ink printed page. Paper, a single blue-black ink, and one red spot color reserved for "home" and "now".
+   Serif for reading and names; typewriter mono for everything that is data (times, dates, labels). */
+@theme static {
+  --color-paper: #eff0ec;
+  --color-ink: #1c2152;
+  --color-ink-hover: #121640;
+  --color-ink-2: rgb(28 33 82 / 0.7);
+  --color-ink-3: rgb(28 33 82 / 0.48);
+  --color-rule: rgb(28 33 82 / 0.16);
+  --color-rule-strong: rgb(28 33 82 / 0.55);
+  --color-tint: rgb(28 33 82 / 0.035);
+  --color-spot: #d4412a;
+
+  --font-serif: "Newsreader Variable", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --font-bn: "Noto Serif Bengali Variable", "Nirmala UI", "Vrinda", serif;
+  --font-et: "Noto Serif Ethiopic Variable", "Nyala", "Ebrima", serif;
 }
 
-html {
-  color-scheme: dark;
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-serif);
+    font-size: 18px;
+    line-height: 1.55;
+    font-optical-sizing: auto;
+    font-variant-numeric: lining-nums;
+  }
+  a {
+    color: inherit;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--color-spot);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+  @media (max-width: 620px) {
+    body {
+      font-size: 17px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+  }
 }
 
-body {
-  background-color: var(--color-bg);
-  color: var(--color-fg);
+/* Shared pieces used across sections. */
+@layer components {
+  .page {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+  .label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-ink-3);
+  }
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-spot);
+    display: inline-block;
+    flex: none;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    padding: 13px 18px;
+    border-radius: 2px;
+  }
+  .btn:hover {
+    background: var(--color-ink-hover);
+  }
+  .link {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+  }
 }

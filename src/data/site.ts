@@ -1,10 +1,12 @@
 export const SITE = {
   name: "Asif Hossain Khan",
-  shortName: "Asif Khan",
-  title: "Senior Frontend Engineer",
+  title: "Senior frontend engineer",
   description:
-    "Senior frontend engineer building data-heavy React and Next.js products — government e-services, AI hiring tools, and the internal platforms teams run on.",
-  location: "Dhaka, Bangladesh",
+    "Asif Hossain Khan is a senior frontend engineer in Dhaka who has built products in government services, AI hiring, construction, marketing and climate tech for teams in six countries.",
+  homeZone: "Asia/Dhaka",
+  homeCity: "Dhaka",
+  // Working hours on Dhaka time, used for the "when can we talk" overlap.
+  workingHours: [11, 20] as [number, number],
   email: "asif.khan10388@gmail.com",
   calUrl: "https://cal.com/asif10388/15min",
   resumeUrl: "/resume.pdf",
@@ -13,10 +15,4 @@ export const SITE = {
     github: "https://github.com/asif10388",
     linkedin: "https://www.linkedin.com/in/asif10388",
   },
-  stats: [
-    { value: "5 yrs", label: "building React & Next.js products" },
-    { value: "7,600+", label: "applications in a national portal's first month" },
-    { value: "0 → 10K", label: "users on a captive portal" },
-    { value: "1,000+", label: "candidates assessed on a platform I led" },
-  ],
-} as const
+}

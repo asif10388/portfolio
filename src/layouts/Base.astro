@@ -1,4 +1,10 @@
 ---
+import "@fontsource-variable/newsreader/opsz.css"
+import "@fontsource-variable/newsreader/opsz-italic.css"
+import "@fontsource/ibm-plex-mono/400.css"
+import "@fontsource/ibm-plex-mono/500.css"
+import "@fontsource-variable/noto-serif-bengali/index.css"
+import "@fontsource-variable/noto-serif-ethiopic/index.css"
 import "@/styles/global.css"
 import { ClientRouter } from "astro:transitions"
 import { SITE } from "@/data/site"
@@ -9,7 +15,7 @@ interface Props {
 }
 
 const { title, description = SITE.description } = Astro.props
-const pageTitle = title ? `${title} — ${SITE.shortName}` : `${SITE.name} — ${SITE.title}`
+const pageTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} · Senior Frontend Engineer`
 const canonical = new URL(Astro.url.pathname, Astro.site)
 ---
 
@@ -20,6 +26,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#eff0ec" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -30,7 +37,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <meta name="twitter:card" content="summary_large_image" />
     <ClientRouter />
   </head>
-  <body class="min-h-dvh antialiased">
-    <slot />
+  <body>
+    <div class="page">
+      <slot />
+    </div>
+    <script>
+      import "../scripts/live"
+    </script>
   </body>
 </html>

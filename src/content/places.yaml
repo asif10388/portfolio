@@ -1,0 +1,122 @@
+# "Products people use": one entry per country, shown in `order`.
+# Add `link: { label: "Read the case study", href: "/work/..." }` to a project once its page exists.
+
+- id: ethiopia
+  order: 1
+  country: Ethiopia
+  domain: Government services
+  script: { text: "ኢትዮጵያ", lang: am }
+  ethiopianDate: true
+  projects:
+    - who: AppliedLine · Senior frontend engineer · 2026 to now
+      title: A national citizen portal and its mobile app
+      body: >-
+        Six government services, from vehicle registration to land titles, with draft saving, document
+        upload and live chat with staff. It runs in five languages, including right-to-left Arabic, and went
+        from first commit to production in four months.
+      figures:
+        - { value: "7,600+", label: "applications, first month" }
+        - { value: "68%", label: "completed" }
+        - { value: "5", label: "languages" }
+
+- id: canada
+  order: 2
+  country: Canada
+  domain: AI hiring
+  projects:
+    - who: Driip · Technical lead · 2023 to now
+      title: Talentos, AI recruiting agents that wait for a person to say yes
+      body: >-
+        Talentos screens résumés against a rubric, books interviews and writes candidate email. Its agents
+        can draft anything, but every write waits for human approval. It plugs into Lever, Workable and
+        Greenhouse. I wrote most of the FastAPI backend and the Next.js frontend.
+      figures:
+        - { value: "3", label: "AI agents" }
+        - { value: "3", label: "ATS integrations" }
+        - { value: "56", label: "backend tests" }
+    - who: Driip · Technical lead
+      title: The hiring platform, from first commit through three pivots
+      body: >-
+        Proctored assessments with browser lockdown and webcam recording, and an AI interview pipeline that
+        writes feedback with no human reviewer. I led a team of three engineers through it.
+      figures:
+        - { value: "1,000+", label: "candidates assessed" }
+        - { value: "2", label: "paying clients" }
+        - { value: "805", label: "commits" }
+
+- id: united-states
+  order: 3
+  country: United States
+  domain: Climate tech
+  live: true
+  projects:
+    - who: ConneqtedAgents · Full-stack engineer · 2023–25
+      title: Green Jobs Board, where climate jobs get posted and found
+      body: >-
+        A climate-hiring platform for a US client, rebuilt full-stack in Next.js and FastAPI. It's live, and
+        organizations post new climate roles to it every week.
+      figures:
+        - { value: "1,500+", label: "open roles" }
+        - { value: "1,000+", label: "organizations" }
+      link: { label: "Visit greenjobsboard.us", href: "https://www.greenjobsboard.us/" }
+
+- id: lithuania
+  order: 4
+  country: Lithuania
+  domain: Marketing
+  projects:
+    - who: Netzet · Frontend product engineer · 2025–26
+      title: Funnels marketers can split-test without a deploy
+      body: >-
+        Four lead-generation sites with six swappable templates each, plus the CRM editor marketers use to
+        launch A/B variants themselves. Underneath, a shared component library that 31 internal revenue and
+        ad-spend tools are built on.
+      figures:
+        - { value: "56", label: "shared components" }
+        - { value: "31", label: "internal tools" }
+        - { value: "6", label: "templates per funnel" }
+
+- id: united-kingdom
+  order: 5
+  country: United Kingdom
+  domain: Construction
+  projects:
+    - who: ConneqtedAgents · Sole frontend engineer · 2023–25
+      title: ContractIQ, piloted by TClarke
+      body: >-
+        A contract-claims manager for a UK building-services contractor. I took it from prototype to a
+        working pilot on my own in four months.
+      figures:
+        - { value: "4", label: "months to pilot" }
+        - { value: "16", label: "live claims" }
+        - { value: "7", label: "projects" }
+
+- id: australia
+  order: 6
+  country: Australia
+  domain: Construction
+  projects:
+    - who: ConneqtedAgents · Frontend lead · 2023–25
+      title: Quantiify, counting materials on construction drawings
+      body: >-
+        An AI tool for Australian and UK estimators. I built the canvas editor where they correct the 50 to
+        100 symbols it detects on each page, with live progress streamed over SSE.
+      figures:
+        - { value: "50–100", label: "symbols per page" }
+        - { value: "56", label: "PRs reviewed as lead" }
+
+- id: bangladesh
+  order: 7
+  country: Bangladesh
+  domain: Telecom
+  script: { text: "বাংলাদেশ", lang: bn }
+  home: true
+  projects:
+    - who: Bonton Connect · Software engineer · 2021–23
+      title: A Wi-Fi portal that replaced scratch cards
+      body: >-
+        The captive portal for Bonton-Tong's Wi-Fi service, with online payment through Portwallet instead of
+        printed cards. I also rebuilt the marketing site in Astro.
+      figures:
+        - { value: "10,000", label: "users, from zero" }
+        - { value: "30%", label: "faster page loads" }
