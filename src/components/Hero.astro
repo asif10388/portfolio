@@ -18,10 +18,10 @@ import { SITE } from "@/data/site"
     European hours.
   </p>
   <div class="actions">
-    <a class="btn" href={SITE.calUrl} target="_blank" rel="noopener">
+    <a class="btn" href={SITE.calUrl} target="_blank" rel="noopener" data-track="book_call" data-placement="hero">
       Book a 15-minute call <span aria-hidden="true">→</span>
     </a>
-    <a class="link" href={SITE.resumeUrl}>Résumé, PDF</a>
+    <a class="link" href={SITE.resumeUrl} data-track="resume" data-placement="hero">Résumé, PDF</a>
     {
       SITE.availableForContract && (
         <span class="avail">

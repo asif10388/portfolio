@@ -71,6 +71,8 @@ const eth = ethiopianToday(new Date())
                 <a
                   class="more"
                   href={p.link.href}
+                  data-track="project_link"
+                  data-placement={data.country}
                   {...(p.link.href.startsWith("http") ? { target: "_blank", rel: "noopener" } : {})}
                 >
                   {p.link.label}
