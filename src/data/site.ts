@@ -7,7 +7,7 @@ export const SITE = {
   homeZone: "Asia/Dhaka",
   resumeUrl: "/resume.pdf",
   availableForContract: true,
-  email: "asif.khan10388@gmail.com",
+  email: "asif@asifhossainkhan.me",
   calUrl: "https://cal.com/asif10388/15min",
   workingHours: [11, 20] as [number, number],
   posthog: {
