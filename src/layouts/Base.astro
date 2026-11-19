@@ -16,7 +16,8 @@ interface Props {
 
 const { title, description = SITE.description } = Astro.props
 const pageTitle = title ? `${title} · ${SITE.name}` : `${SITE.name} · Senior Frontend Engineer`
-const canonical = new URL(Astro.url.pathname, Astro.site)
+// build.format "file" makes pathnames end in ".html" ("/index.html", "/work/x.html"); canonical URLs drop it.
+const canonical = new URL(Astro.url.pathname.replace(/(index)?\.html$/, ""), Astro.site)
 ---
 
 <!doctype html>
