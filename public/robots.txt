@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://asifkhandev.netlify.app/sitemap-index.xml
+Sitemap: https://asifhossainkhan.me/sitemap-index.xml

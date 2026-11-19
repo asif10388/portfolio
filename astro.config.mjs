@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap"
 import tailwindcss from "@tailwindcss/vite"
 
 // Change this one line when moving to a custom domain.
-const SITE_URL = "https://asifkhandev.netlify.app"
+const SITE_URL = "https://asifhossainkhan.me"
 
 export default defineConfig({
   site: SITE_URL,
